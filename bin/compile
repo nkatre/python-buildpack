@@ -276,3 +276,11 @@ if [[ ! "$DOCKER_BUILD" ]]; then
   bpwatch stop anvil_appdir_commit
   bpwatch stop compile
 fi
+
+puts-step "Starting Proxy"
+
+puts-step $BUILD_DIR
+puts-step $APPD_DIR
+
+pyagent proxy start -c $BUILD_DIR/appdynamics.cfg -d
+
