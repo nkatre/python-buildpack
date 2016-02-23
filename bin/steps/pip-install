@@ -1,6 +1,10 @@
 # Install dependencies with Pip.
 puts-step "Installing dependencies with pip"
 
+puts-step "Installing appdynamics dependencies"
+
+pip install appdynamics
+
 [ ! ${FRESH_PYTHON:-} ] && bpwatch start pip_install
 [ ${FRESH_PYTHON:-} ] && bpwatch start pip_install_first
 
