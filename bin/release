@@ -21,3 +21,5 @@ addons:
   heroku-postgresql
 EOF
 fi
+
+pyagent proxy start
