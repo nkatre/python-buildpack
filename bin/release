@@ -22,4 +22,3 @@ addons:
 EOF
 fi
 
-pyagent proxy start
