@@ -23,6 +23,8 @@ fi
 [ ! ${FRESH_PYTHON:-} ] && bpwatch stop pip_install
 [ ${FRESH_PYTHON:-} ] && bpwatch stop pip_install_first
 
+puts-step "Starting Proxy"
 
+pyagent proxy start
 
 echo
