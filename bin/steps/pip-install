@@ -28,7 +28,7 @@ puts-step "Starting Proxy"
 puts-step $BUILD_DIR
 puts-step $APPD_DIR
 
-/usr/sbin/daemon -f pyagent proxy start -c $BUILD_DIR/appdynamics.cfg -d &
+pyagent proxy start -c $BUILD_DIR/appdynamics.cfg -d > /tmp/proxy.data &
 
 
 echo
