@@ -25,6 +25,6 @@ fi
 
 puts-step "Starting Proxy"
 
-pyagent proxy start
+pyagent proxy start -c appdynamics.config -d
 
 echo
