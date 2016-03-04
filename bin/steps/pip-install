@@ -1,9 +1,9 @@
 # Install dependencies with Pip.
 puts-step "Installing dependencies with pip"
 
-puts-step "Installing appdynamics dependencies"
+#puts-step "Installing appdynamics dependencies"
 
-pip install appdynamics
+#pip install appdynamics
 
 [ ! ${FRESH_PYTHON:-} ] && bpwatch start pip_install
 [ ${FRESH_PYTHON:-} ] && bpwatch start pip_install_first
@@ -23,11 +23,11 @@ fi
 [ ! ${FRESH_PYTHON:-} ] && bpwatch stop pip_install
 [ ${FRESH_PYTHON:-} ] && bpwatch stop pip_install_first
 
-puts-step "Starting Proxy"
+#puts-step "Starting Proxy"
 
 #puts-step $BUILD_DIR
 #puts-step $APPD_DIR
 
 #pyagent proxy start -c $BUILD_DIR/appdynamics.cfg -d &
-pyagent run -c $BUILD_DIR/appdynamics.cfg
+#pyagent run -c $BUILD_DIR/appdynamics.cfg
 echo
