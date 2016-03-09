@@ -24,6 +24,10 @@ fi
 [ ${FRESH_PYTHON:-} ] && bpwatch stop pip_install_first
 
 #puts-step "Starting Proxy"
+echo ENV
+echo $VCAP_SERVICES
+echo ${VCAP_SERVICES}
+
 
 #puts-step $BUILD_DIR
 #puts-step $APPD_DIR
