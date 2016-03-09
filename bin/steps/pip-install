@@ -29,5 +29,5 @@ fi
 #puts-step $APPD_DIR
 
 #pyagent proxy start -c $BUILD_DIR/appdynamics.cfg -d &
-pyagent run -c $BUILD_DIR/appdynamics.cfg -- gunicorn -w 8 -b '0.0.0.0:9000' appdynamics.scripts.wsgi:application &
+#pyagent run -c $BUILD_DIR/appdynamics.cfg -- gunicorn -w 8 -b '0.0.0.0:9000' appdynamics.scripts.wsgi:application &
 echo
