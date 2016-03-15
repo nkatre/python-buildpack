@@ -33,5 +33,8 @@ echo ${VCAP_SERVICES}
 #puts-step $APPD_DIR
 
 #pyagent proxy start -c $BUILD_DIR/appdynamics.cfg -d &
-pyagent run -c $BUILD_DIR/appdynamics.cfg -- gunicorn -w 8 -b '0.0.0.0:9000' appdynamics.scripts.wsgi:application
+puts-step "starting proxy"
+
+nohup pyagent run -c $BUILD_DIR/appdynamics.cfg -- gunicorn -w 8 -b '127.0.0.1:9000' demo.app:app &
+
 echo
