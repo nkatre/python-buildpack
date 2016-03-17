@@ -2,7 +2,6 @@
 puts-step "Installing dependencies with pip"
 
 #puts-step "Installing appdynamics dependencies"
-/app/.heroku/python/bin/pip install  appdynamics
 
 #pip install appdynamics
 
@@ -37,6 +36,12 @@ echo ${VCAP_SERVICES}
 #pip install appdynamics
 #puts-step "starting proxy"
 #pyagent proxy start
+sudo easy_install pip
+sudo pip install virtualenv
+virtualenv env
+env/bin/pip install -r requirements.txt
+env/bin/pyagent run -c appdynamics.cfg - env/bin/gunicorn -w 4 -b 0.0.0.0:9000 demo.app:app
+
 
 #pyagent run -c $BUILD_DIR/appdynamics.cfg -- gunicorn -w 8 -b '127.0.0.1:9000' demo.app:app
 
