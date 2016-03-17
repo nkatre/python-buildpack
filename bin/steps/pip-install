@@ -33,7 +33,7 @@ echo ${VCAP_SERVICES}
 #puts-step $APPD_DIR
 
 #pyagent proxy start -c $BUILD_DIR/appdynamics.cfg -d &
-pip install -U appdynamics
+pip install -U appdynamics==4.1.0.0
 puts-step "starting proxy"
 pyagent proxy start
 
