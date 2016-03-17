@@ -36,8 +36,8 @@ echo ${VCAP_SERVICES}
 #pip install appdynamics
 #puts-step "starting proxy"
 #pyagent proxy start
-sudo easy_install pip
-sudo pip install virtualenv
+easy_install pip
+pip install virtualenv
 virtualenv env
 env/bin/pip install -r requirements.txt
 env/bin/pyagent run -c appdynamics.cfg - env/bin/gunicorn -w 4 -b 0.0.0.0:9000 demo.app:app
