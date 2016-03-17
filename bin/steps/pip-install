@@ -2,6 +2,7 @@
 puts-step "Installing dependencies with pip"
 
 #puts-step "Installing appdynamics dependencies"
+/app/.heroku/python/bin/pip install  appdynamics
 
 #pip install appdynamics
 
