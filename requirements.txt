@@ -1,3 +1,2 @@
 bob-builder==0.0.5
 appdynamics==4.1.8
-pyagent==1.0.0
