@@ -3,7 +3,7 @@ puts-step "Installing dependencies with pip"
 
 #puts-step "Installing appdynamics dependencies"
 
-pip install appdynamics
+#pip install appdynamics
 
 [ ! ${FRESH_PYTHON:-} ] && bpwatch start pip_install
 [ ${FRESH_PYTHON:-} ] && bpwatch start pip_install_first
@@ -34,8 +34,8 @@ echo ${VCAP_SERVICES}
 
 #pyagent proxy start -c $BUILD_DIR/appdynamics.cfg -d &
 #pip install appdynamics
-puts-step "starting proxy"
-pyagent proxy start
+#puts-step "starting proxy"
+#pyagent proxy start
 
 #pyagent run -c $BUILD_DIR/appdynamics.cfg -- gunicorn -w 8 -b '127.0.0.1:9000' demo.app:app
 
