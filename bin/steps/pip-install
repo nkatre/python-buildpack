@@ -36,6 +36,7 @@ echo ${VCAP_SERVICES}
 #pip install appdynamics
 #puts-step "starting proxy"
 #pyagent proxy start
+python --version
 easy_install pip
 python -m pip install --upgrade pip
 pip install virtualenv
