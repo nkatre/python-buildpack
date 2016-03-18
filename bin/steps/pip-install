@@ -37,6 +37,7 @@ echo ${VCAP_SERVICES}
 #puts-step "starting proxy"
 #pyagent proxy start
 easy_install pip
+python -m pip install --upgrade pip
 pip install virtualenv
 virtualenv env
 #ls -alR /
