@@ -44,6 +44,7 @@ virtualenv env
 #ls -alR /
 /app/env/bin/pip install gunicorn
 /app/env/bin/pip install requests
+/app/env/bin/pip install flask
 /app/env/bin/pip install https://pypi.python.org/packages/py2/a/appdynamics/appdynamics-4.2.1.1-py2-none-any.whl
 #/app/env/bin/pip install --pre appdynamics
 #/app/env/bin/pip install --pre appdynamics
