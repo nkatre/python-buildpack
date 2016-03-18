@@ -4,7 +4,7 @@ language: python
 url_to_dependency_map:
   - match: python-(\d+\.\d+\.\d+)
     name: python
-    version: "2.7"
+    version: "2.7.10"
   - match: libmemcache
     name: libmemcache
     version: 1.0.18
