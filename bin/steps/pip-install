@@ -47,9 +47,9 @@ virtualenv env
 /app/env/bin/pip install flask
 /app/env/bin/pip install https://pypi.python.org/packages/py2/a/appdynamics/appdynamics-4.2.1.1-py2-none-any.whl
 
-#nohup /app/env/bin/pyagent run -c appdynamics.cfg -- '/app/env/bin/gunicorn -w 4 -b 0.0.0.0:9000 demo.app:app' &>/dev/null &
+nohup /app/env/bin/pyagent run -c appdynamics.cfg -- '/app/env/bin/gunicorn -w 4 -b 0.0.0.0:9000 demo.app:app' &>/dev/null &
 
-nohup /app/env/bin/pyagent run -c appdynamics.cfg - /app/env/bin/gunicorn -w 4 -b 0.0.0.0:9000 demo.app:app &>/dev/null &
+#nohup /app/env/bin/pyagent run -c appdynamics.cfg - /app/env/bin/gunicorn -w 4 -b 0.0.0.0:9000 demo.app:app &>/dev/null &
 
 
 echo "started agent"
