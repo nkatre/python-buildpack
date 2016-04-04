@@ -58,6 +58,6 @@ virtualenv env
 sleep 15
 
 ps -ef
-curl 0.0.0.0:9000/http
+exit $?
 
 echo
