@@ -51,7 +51,9 @@ virtualenv env
 
 #/app/env/bin/pyagent proxy start &
 
-/app/env/bin/pyagent run -c appdynamics.cfg -- /app/env/bin/gunicorn -w 4 -b 0.0.0.0:9000 demo.app:app >/dev/null &
+#/app/env/bin/pyagent run -c appdynamics.cfg -- /app/env/bin/gunicorn -w 4 -b 0.0.0.0:9000 demo.app:app >/dev/null &
+
+/app/env/bin/pyagent run -c appdynamics.cfg -- /app/env/bin/python app.py &
 
 ps -ef
 curl 0.0.0.0:9000/http
