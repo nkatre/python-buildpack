@@ -2,10 +2,6 @@
 # Install dependencies with Pip.
 puts-step "Installing dependencies with pip"
 
-#puts-step "Installing appdynamics dependencies"
-
-#pip install appdynamics
-
 [ ! ${FRESH_PYTHON:-} ] && bpwatch start pip_install
 [ ${FRESH_PYTHON:-} ] && bpwatch start pip_install_first
 
@@ -25,39 +21,18 @@ fi
 [ ${FRESH_PYTHON:-} ] && bpwatch stop pip_install_first
 
 #puts-step "Starting Proxy"
-echo ENV
-echo $VCAP_SERVICES
-echo ${VCAP_SERVICES}
 
-
-#puts-step $BUILD_DIR
-#puts-step $APPD_DIR
-
-#pyagent proxy start -c $BUILD_DIR/appdynamics.cfg -d &
-#pip install appdynamics
-#puts-step "starting proxy"
-#pyagent proxy start
 python --version
 easy_install pip
 python -m pip install --upgrade pip
 pip install virtualenv
 virtualenv env
-#ls -alR /
+
 /app/env/bin/pip install gunicorn
 /app/env/bin/pip install requests
 /app/env/bin/pip install flask
 /app/env/bin/pip install https://pypi.python.org/packages/py2/a/appdynamics/appdynamics-4.2.1.1-py2-none-any.whl
-#/app/env/bin/pyagent run -c appdynamics.cfg -- /app/env/bin/gunicorn -w 4 -b 0.0.0.0:9000 demo.app:app
-
-#/app/env/bin/pyagent proxy start &
 
 /app/env/bin/pyagent run -c appdynamics.cfg -- /app/env/bin/gunicorn -w 4 -b 0.0.0.0:9000 demo.app:app >/dev/null &
 
-#/app/env/bin/pyagent run -c appdynamics.cfg -- /app/env/bin/python app.py &
-
 sleep 15
-
-ps -ef
-exit $?
-
-echo
