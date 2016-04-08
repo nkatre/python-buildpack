@@ -29,6 +29,6 @@ fi
 #virtualenv env
 
 #/app/env/bin/pip install requests
-pip install https://pypi.python.org/packages/py2/a/appdynamics/appdynamics-4.2.1.1-py2-none-any.whl
+#pip install https://pypi.python.org/packages/py2/a/appdynamics/appdynamics-4.2.1.1-py2-none-any.whl
 
 #/app/env/bin/pyagent run -c /app/appdynamics.cfg -- /app/env/bin/gunicorn -w 8 -b '0.0.0.0:9000' demo.app:app >/dev/null &
