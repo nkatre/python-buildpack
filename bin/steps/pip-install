@@ -23,9 +23,9 @@ fi
 #puts-step "Starting Proxy"
 
 python --version
-#easy_install pip
-#python -m pip install --upgrade pip
-#pip install virtualenv
+easy_install pip
+python -m pip install --upgrade pip
+pip install virtualenv
 #virtualenv env
 
 #/app/env/bin/pip install requests
